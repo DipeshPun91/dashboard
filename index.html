@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sidebar</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <aside id="sidebar" class="sidebar">
+      <ul>
+        <li>
+          <div class="logo-container">
+            <svg
+              fill="#000000"
+              viewBox="0 0 512 512"
+              xmlns="http://www.w3.org/2000/svg"
+              width="30"
+              height="30"
+            >
+              <path
+                d="M112.31,268l40.36-68.69,34.65,59-67.54,115h135L289.31,432H16Zm58.57-99.76,33.27-56.67L392.44,432H325.76ZM222.67,80h66.59L496,432H429.32Z"
+              ></path>
+            </svg>
+            <span class="logo">Bitwise</span>
+          </div>
+          <button onclick="toggleSidebar()" id="toggle-btn" class="toggle-btn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="30"
+              height="30"
+              fill="#e8eaed"
+              viewBox="0 0 30 30"
+            >
+              <path
+                d="M3 7H27C27.5523 7 28 7.44772 28 8C28 8.55228 27.5523 9 27 9H3C2.44772 9 2 8.55228 2 8C2 7.44772 2.44772 7 3 7ZM3 14H27C27.5523 14 28 14.4477 28 15C28 15.5523 27.5523 16 27 16H3C2.44772 16 2 15.5523 2 15C2 14.4477 2.44772 14 3 14ZM3 21H27C27.5523 21 28 21.4477 28 22C28 22.5523 27.5523 23 27 23H3C2.44772 23 2 22.5523 2 22C2 21.4477 2.44772 21 3 21Z"
+              />
+            </svg>
+          </button>
+        </li>
+        <li class="active">
+          <a href="index.html">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+              fill="#e8eaed"
+            >
+              <path
+                d="M240-200h120v-200q0-17 11.5-28.5T400-440h160q17 0 28.5 11.5T600-400v200h120v-360L480-740 240-560v360Zm-80 0v-360q0-19 8.5-36t23.5-28l240-180q21-16 48-16t48 16l240 180q15 11 23.5 28t8.5 36v360q0 33-23.5 56.5T720-120H560q-17 0-28.5-11.5T520-160v-200h-80v200q0 17-11.5 28.5T400-120H240q-33 0-56.5-23.5T160-200Zm320-270Z"
+              />
+            </svg>
+            <span>Home</span>
+          </a>
+        </li>
+        <li>
+          <a href="dashboard.html">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+              fill="#e8eaed"
+            >
+              <path
+                d="M520-640v-160q0-17 11.5-28.5T560-840h240q17 0 28.5 11.5T840-800v160q0 17-11.5 28.5T800-600H560q-17 0-28.5-11.5T520-640ZM120-480v-320q0-17 11.5-28.5T160-840h240q17 0 28.5 11.5T440-800v320q0 17-11.5 28.5T400-440H160q-17 0-28.5-11.5T120-480Zm400 320v-320q0-17 11.5-28.5T560-520h240q17 0 28.5 11.5T840-480v320q0 17-11.5 28.5T800-120H560q-17 0-28.5-11.5T520-160Zm-400 0v-160q0-17 11.5-28.5T160-360h240q17 0 28.5 11.5T440-320v160q0 17-11.5 28.5T400-120H160q-17 0-28.5-11.5T120-160Zm80-360h160v-240H200v240Zm400 320h160v-240H600v240Zm0-480h160v-80H600v80ZM200-200h160v-80H200v80Zm160-320Zm240-160Zm0 240ZM360-280Z"
+              />
+            </svg>
+            <span>Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <button onclick="toggleSubMenu(this)" class="dropdown-btn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 0 24 24"
+              width="24px"
+              fill="#e8eaed"
+            >
+              <path d="M0 0h24v24H0z" fill="none" />
+              <path d="M10 4l2 2h8v12H4V4h6z" opacity=".3" />
+              <path
+                d="M20 6h-8l-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm0 12H4V4h5.17L11.17 6H20v12z"
+              />
+            </svg>
+            <span>Services</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+              fill="#e8eaed"
+            >
+              <path
+                d="M480-361q-8 0-15-2.5t-13-8.5L268-556q-11-11-11-28t11-28q11-11 28-11t28 11l156 156 156-156q11-11 28-11t28 11q11 11 11 28t-11 28L508-372q-6 6-13 8.5t-15 2.5Z"
+              />
+            </svg>
+          </button>
+          <ul class="sub-menu">
+            <div>
+              <li><a href="#">Web Development</a></li>
+              <li><a href="#">Mobile App Development</a></li>
+              <li><a href="#">UI/UX Design</a></li>
+              <li><a href="#">Cloud Solutions</a></li>
+            </div>
+          </ul>
+        </li>
+        <li>
+          <button onclick="toggleSubMenu(this)" class="dropdown-btn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 0 24 24"
+              width="24px"
+              fill="#e8eaed"
+            >
+              <path d="M0 0h24v24H0z" fill="none" />
+              <path
+                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v2h-2zm0 4h2v6h-2z"
+              />
+            </svg>
+
+            <span>About</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+              fill="#e8eaed"
+            >
+              <path
+                d="M480-361q-8 0-15-2.5t-13-8.5L268-556q-11-11-11-28t11-28q11-11 28-11t28 11l156 156 156-156q11-11 28-11t28 11q11 11 11 28t-11 28L508-372q-6 6-13 8.5t-15 2.5Z"
+              />
+            </svg>
+          </button>
+          <ul class="sub-menu">
+            <div>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </div>
+          </ul>
+        </li>
+        <li>
+          <a href="">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 0 24 24"
+              width="24px"
+              fill="#e8eaed"
+            >
+              <path d="M0 0h24v24H0z" fill="none" />
+              <path
+                d="M5 20h14v-2H5v2zm1-4h3v-8H6v8zm5 0h3v-11h-3v11zm5 0h3v-5h-3v5z"
+              />
+            </svg>
+
+            <span>Statistics</span>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 0 24 24"
+              width="24px"
+              fill="#e8eaed"
+            >
+              <path d="M0 0h24v24H0z" fill="none" />
+              <path
+                d="M19.43 12.98c.04-.32.07-.66.07-1s-.03-.68-.07-1l2.11-1.65c.19-.14.24-.42.11-.63l-2-3.46c-.13-.23-.41-.3-.63-.22l-2.49 1c-.52-.4-1.08-.73-1.69-.98l-.38-2.65A.495.495 0 0 0 14 2h-4c-.26 0-.48.19-.49.45L9.14 5.1c-.61.25-1.18.58-1.69.98l-2.49-1a.492.492 0 0 0-.63.22l-2 3.46c-.13.22-.08.49.11.63l2.11 1.65c-.05.33-.07.67-.07 1s.03.68.07 1L2.9 14.63a.492.492 0 0 0-.11.63l2 3.46c.13.23.41.3.63.22l2.49-1c.52.4 1.08.73 1.69.98l.38 2.65c.02.26.24.45.49.45h4c.26 0 .48-.19.49-.45l.38-2.65c.61-.25 1.18-.58 1.69-.98l2.49 1c.23.08.5.01.63-.22l2-3.46c.13-.22.08-.49-.11-.63l-2.11-1.65zM12 15.5c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z"
+              />
+            </svg>
+            <span>Setting</span>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+              fill="#e8eaed"
+            >
+              <path
+                d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-240v-32q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v32q0 33-23.5 56.5T720-160H240q-33 0-56.5-23.5T160-240Zm80 0h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T560-640q0-33-23.5-56.5T480-720q-33 0-56.5 23.5T400-640q0 33 23.5 56.5T480-560Zm0-80Zm0 400Z"
+              />
+            </svg>
+            <span>Profile</span>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 0 24 24"
+              width="24px"
+              fill="#e8eaed"
+            >
+              <path d="M0 0h24v24H0z" fill="none" />
+              <path
+                d="M17 8l4 4-4 4v-3H7v-2h10V8zM16 2H8c-1.1 0-2 .9-2 2v4h2V4h8v16H8v-4H6v4c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"
+              />
+            </svg>
+            <span>Log Out</span>
+          </a>
+        </li>
+      </ul>
+    </aside>
+
+    <main>
+      <header class="navbar">
+        <div class="navbar-container">
+          <div class="search-bar">
+            <div class="InputContainer">
+              <input
+                type="text"
+                placeholder="Search..."
+                id="search-input"
+                class="input"
+              />
+              <label for="search-input" class="labelforsearch">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24px"
+                  viewBox="0 0 24 24"
+                  width="24px"
+                  class="searchIcon"
+                >
+                  <path d="M0 0h24v24H0z" fill="none" />
+                  <path
+                    d="M15.5 14h-.79l-.28-.27A6.518 6.518 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+                  />
+                </svg>
+              </label>
+              <div class="border"></div>
+              <button class="micButton">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="micIcon"
+                  height="24px"
+                  viewBox="0 0 384 512"
+                  width="24px"
+                >
+                  <path
+                    d="M192 0C139 0 96 43 96 96V256c0 53 43 96 96 96s96-43 96-96V96c0-53-43-96-96-96zM64 216c0-13.3-10.7-24-24-24s-24 10.7-24 24v40c0 89.1 66.2 162.7 152 174.4V464H120c-13.3 0-24 10.7-24 24s10.7 24 24 24h72 72c13.3 0 24-10.7 24-24s-10.7-24-24-24H216V430.4c85.8-11.7 152-85.3 152-174.4V216c0-13.3-10.7-24-24-24s-24 10.7-24 24v40c0 70.7-57.3 128-128 128s-128-57.3-128-128V216z"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="navbar-actions">
+            <div class="notification-icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24px"
+                viewBox="0 0 24 24"
+                width="24px"
+                fill="#e8eaed"
+              >
+                <path d="M0 0h24v24H0z" fill="none" />
+                <path
+                  d="M12 2c-1.1 0-2 .9-2 2h4c0-1.1-.9-2-2-2zm6 14v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5S11 3.17 11 4v.68C8.13 5.36 6.5 7.93 6.5 11v5l-2 2v1h15v-1l-2-2zm-6 3c-1.1 0-2-.9-2-2h4c0 1.1-.9 2-2 2z"
+                />
+              </svg>
+            </div>
+
+            <div class="calendar-icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24px"
+                viewBox="0 0 24 24"
+                width="24px"
+                fill="#e8eaed"
+              >
+                <path d="M0 0h24v24H0z" fill="none" />
+                <path
+                  d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.1 0-1.99.9-1.99 2L3 19c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zm-7-7h5v5h-5z"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="container">
+        <div class="content">
+          <h2>Hello World</h2>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis
+            porro iure quaerat aliquam! Optio dolorum in eum provident, facilis
+            error repellendus excepturi enim dolor deleniti adipisci consectetur
+            doloremque, unde maiores odit sapiente. Atque ab necessitatibus
+            laboriosam consequatur eius similique, ex dolorum eum eaque sequi id
+            veritatis voluptates perspiciatis, cupiditate pariatur.
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <script type="text/javascript" src="js/app.js"></script>
+  </body>
+</html>
